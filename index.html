@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form and Events Calendar</title>
+    <style>
+        /* Reseting default margin and padding */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        /* General styles for layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Login form styles */
+        .login-form {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .login-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+        /* Calendar styles */
+        .calendar {
+            margin-top: 20px;
+            text-align: center;
+         
+        }
+        .calendar table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+        }
+        .calendar th,
+        .calendar td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .calendar th {
+            background-color: #f2f2f2;
+        }
+        .calendar td:hover {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        /* Highlighting events styles */
+        .event {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div class="login-form">
+            <h2>Login Form</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+
+                <input type="submit" value="Submit" onclick="submitForm()">
+            </form>
+            <div class="thank-you-message" id="thankYouMessage">Thanks for your review!</div>
+        </div>
+
+        <!-- Calendar -->
+        <div class="calendar"><h2
+>Calendar for the month of August</h2>
+            <table>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="event">1</td>
+                </tr>
+                <tr>
+                    <td class="event">2</td>
+                    <td class="event">3</td>
+                    <td class="event">4</td>
+                    <td class="event">5</td>
+                    <td class="event">6</td>
+                    <td class="event">7</td>
+                    <td class="event">8</td>
+                </tr>
+                <tr>
+                    <td class="event">9</td>
+                    <td class="event">10</td>
+                    <td class="event">11</td>
+                    <td class="event">12</td>
+                    <td class="event">13</td>
+                    <td class="event">14</td>
+                    <td class="event">15</td>
+                </tr>
+                <tr>
+                    <td class="event">16</td>
+                    <td class="event">17</td>
+                    <td class="event">18</td>
+                    <td class="event">19</td>
+                    <td class="event">20</td>
+                    <td class="event">21</td>
+                    <td class="event">22</td>
+                </tr>
+                <tr>
+                    <td class="event">23</td>
+                    <td class="event">24</td>
+                    <td class="event">25</td>
+                    <td class="event">26</td>
+                    <td class="event">27</td>
+                    <td class="event">28</td>
+                    <td class="event">29</td>
+                </tr>
+                <tr>
+                    <td class="event">30</td>
+                    <td class="event">31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+   
+</body>
+</html>
